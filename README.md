@@ -30,16 +30,15 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 ---
 
-# Things to add before due date
+# Things to add 
 - CSS and tidying up of Signup Page
 - CSS and tidying up of Login Page
 - CSS for new Custom Spells
   - dropdown box for spell school selection
 - CSS for Edit modal
 - Some kind of create spell validation that alerts the user if spell doesn't exist (maybe ask if they'd like to add it as new custom spell?)
-- add "partials" for consistent header and footer across pages?
-- D&D themed background/logos?
-- Host and Deploy! One deployment or separate? 
+- add "partials" for consistent header and footer across pages
+- D&D themed background/logos
 
 - Discuss ?'s with group
 
