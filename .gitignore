@@ -1,2 +1,3 @@
-node_modules/
+#first line
 .env
+node_modules
