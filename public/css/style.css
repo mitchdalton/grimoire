@@ -1,0 +1,225 @@
+/* CSS Variables */
+:root {
+  --content-max-width: 900px;
+  --shadow-color: 277deg 45% 29%;
+  --shadow-elevation-low:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-medium-noColor:
+    0.3px 0.5px 0.7px hsl(277deg 4% 29% / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(277deg 4% 29% / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(277deg 4% 29% / 0.36),
+    5px 10px 12.6px -2.5px hsl(277deg 4% 29% / 0.36);
+  --shadow-elevation-high:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+/* Basic Univeral Styles */
+
+/* For 100% viewport wrapper */
+html, body {
+  height: 100%;
+}
+
+html {
+  background-image: linear-gradient(180deg, #8e6ec4, #412c66);
+  background-attachment: fixed; /*edit*/
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.not {
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+  color: #adcdff;
+}
+
+/* Helper Classes */
+.viewport-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.max-width {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.divider {
+  width: 95%;
+  height: 3px;
+  background-color: #431061;
+  margin: 0 auto;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* Index View */
+.flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+}
+
+
+h1.index{
+  display: flex;
+  justify-content: center;
+  padding-top: 1em
+}
+
+a.spell {
+  color: black; 
+  width: 10%; 
+  text-align: center;
+}
+
+a.spell:hover {
+  background: #6CDFEA;
+  transition: 0.3s;
+}
+
+/*Login View */
+input.spell.hover:hover{
+  background: #6CDFEA;
+  transition: 0.3s;
+}
+
+/* Spell View */
+
+.spellList-heading {
+  text-align: center;
+  color: #e8daf0;
+  margin: 16px 0;
+  padding: 8px;
+  background: #431061;
+  border-top: 3px solid #b591c9;
+  border-bottom: 3px solid #b591c9;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.spellbook-count {
+  margin-top: 1rem;
+}
+
+.spell {
+  padding: 16px;
+  margin: 16px 0;
+  background: lightgrey
+    url("https://cdn.glitch.global/d8728892-fd46-4386-a360-c5a5794e8210/paper-white.jpg?v=1662134011135")
+    no-repeat top;
+  border: 2px solid #431061;
+  border-radius: 2px;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.spell-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.spell-desc {
+  padding: 16px 0;
+  line-height: 1.4;
+}
+
+.spell-btn-group {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.spell-btn-group button{
+  margin: 8px;
+  font-size: 1.25rem;
+}
+
+.logout-button {
+padding-bottom: 15px
+}
+
+/* Modal */
+.modal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(217 0% 28% /.5);
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  /*  Overflow so the modal can scroll if the content is too long  */
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 8px;
+  background: lightgrey
+    url("https://cdn.glitch.global/d8728892-fd46-4386-a360-c5a5794e8210/paper-white.jpg?v=1662134011135")
+    no-repeat top;
+  border-radius: 4px;
+  box-shadow: var(--shadow-elevation-medium-noColor);
+}
+
+.modal h3 {
+  padding: 8px;
+}
+
+.modal-spell-form {
+  flex: 1;
+  padding: 8px;
+}
