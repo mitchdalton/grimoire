@@ -171,8 +171,15 @@ input.spell.hover:hover{
   font-size: 1.25rem;
 }
 
+.spellflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
 .logout-button {
-padding-bottom: 15px
+  justify-content: center;
 }
 
 /* Modal */
