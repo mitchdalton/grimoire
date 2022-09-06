@@ -45,7 +45,6 @@ app.use('/spells', spellsRoutes)
  
 
 
-const uri = process.env.MONGODB_URI;
 
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running on PORT: ' + process.env.PORT)
