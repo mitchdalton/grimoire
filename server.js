@@ -43,6 +43,10 @@ app.use('/', mainRoutes)
 app.use('/todos', todoRoutes)
 app.use('/spells', spellsRoutes)
  
-app.listen(process.env.PORT, ()=>{
+
+
+const uri = process.env.DB_STRING;
+
+app.listen(uri || process.env.PORT, ()=>{
     console.log('Server is running on PORT: ' + process.env.PORT)
 })    
