@@ -1,232 +1,165 @@
-/* CSS Variables */
-:root {
-  --content-max-width: 900px;
-  --shadow-color: 277deg 45% 29%;
-  --shadow-elevation-low:
-    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
-    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
-    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
-  --shadow-elevation-medium:
-    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
-    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
-    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
-    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
-  --shadow-elevation-medium-noColor:
-    0.3px 0.5px 0.7px hsl(277deg 4% 29% / 0.36),
-    0.8px 1.6px 2px -0.8px hsl(277deg 4% 29% / 0.36),
-    2.1px 4.1px 5.2px -1.7px hsl(277deg 4% 29% / 0.36),
-    5px 10px 12.6px -2.5px hsl(277deg 4% 29% / 0.36);
-  --shadow-elevation-high:
-    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
-    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
-    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
-    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
-    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
-    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
-    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
-    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
-}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff; }
 
-/* Basic Univeral Styles */
+p {
+  color: #b3b3b3;
+  font-weight: 300; }
 
-/* For 100% viewport wrapper */
-html, body {
-  height: 100%;
-}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto", sans-serif; }
 
-html {
-  background-image: linear-gradient(180deg, #8e6ec4, #412c66);
-  background-attachment: fixed; /*edit*/
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: white;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-.completed {
-  text-decoration: line-through;
-  color: gray;
-}
-.not {
-  text-decoration: underline;
-}
 a {
-  text-decoration: none;
-  color: #adcdff;
-}
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  a:hover {
+    text-decoration: none !important; }
 
-/* Helper Classes */
-.viewport-wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+.content {
+  padding: 7rem 0; }
 
-.max-width {
-  width: 100%;
-  max-width: var(--content-max-width);
-  margin: 0 auto;
-}
+h2 {
+  font-size: 20px; }
 
-.divider {
-  width: 95%;
-  height: 3px;
-  background-color: #431061;
-  margin: 0 auto;
-}
+.half, .half .container > .row {
+  height: 100vh;
+  min-height: 700px; }
 
-.show {
-  display: block;
-}
+@media (max-width: 991.98px) {
+  .half .bg {
+    height: 200px; } }
 
-.hide {
-  display: none;
-}
+.half .contents {
+  background: #f6f7fc; }
 
-/* Index View */
-.flex-centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  flex-direction: column;
-}
+.half .contents, .half .bg {
+  width: 50%; }
+  @media (max-width: 1199.98px) {
+    .half .contents, .half .bg {
+      width: 100%; } }
+  .half .contents .form-control, .half .bg .form-control {
+    margin-bottom: 30px;
+    border: none;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    height: 54px;
+    background: #fff; }
+    .half .contents .form-control:active, .half .contents .form-control:focus, .half .bg .form-control:active, .half .bg .form-control:focus {
+      outline: none;
+      -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
 
-
-h1.index{
-  display: flex;
-  justify-content: center;
-  padding-top: 1em
-}
-
-a.spell {
-  color: black; 
-  width: 10%; 
-  text-align: center;
-}
-
-a.spell:hover {
-  background: #6CDFEA;
-  transition: 0.3s;
-}
-
-/*Login View */
-input.spell.hover:hover{
-  background: #6CDFEA;
-  transition: 0.3s;
-}
-
-/* Spell View */
-
-.spellList-heading {
-  text-align: center;
-  color: #e8daf0;
-  margin: 16px 0;
-  padding: 8px;
-  background: #431061;
-  border-top: 3px solid #b591c9;
-  border-bottom: 3px solid #b591c9;
-  box-shadow: var(--shadow-elevation-medium);
-}
-
-.spellbook-count {
-  margin-top: 1rem;
-}
-
-.spell {
-  padding: 16px;
-  margin: 16px 0;
-  background: lightgrey
-    url("https://cdn.glitch.global/d8728892-fd46-4386-a360-c5a5794e8210/paper-white.jpg?v=1662134011135")
-    no-repeat top;
-  border: 2px solid #431061;
-  border-radius: 2px;
-  box-shadow: var(--shadow-elevation-medium);
-}
-
-.spell-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 0;
-}
-
-.spell-desc {
-  padding: 16px 0;
-  line-height: 1.4;
-}
-
-.spell-btn-group {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.spell-btn-group button{
-  margin: 8px;
-  font-size: 1.25rem;
-}
-
-.spellflex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@keyframes bg-image {
+  from {background-position: left;}
+  to {background-position: right;}
   
+}     
+.half .bg {
+  background-size: cover;
+  background-position: left;
+  animation-name: bg-image;
+  animation-duration: 60s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite; 
+  animation-timing-function: linear;}
+
+.half a {
+  color: #888;
+  margin: 30px;
 }
 
-.logout-button {
-  justify-content: center;
-}
 
-/* Modal */
-.modal-wrapper {
+
+.half .btn {
+  height: 54px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+
+
+.half .forgot-pass {
+  margin-bottom: 30px;
+  position: relative;
+  top: 2px;
+  font-size: 14px; }
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 14px; }
+  .control .caption {
+    position: relative;
+    top: .2rem;
+    color: #888; }
+
+.control input {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+  z-index: -1;
+  opacity: 0; }
 
-.modal-overlay {
+.control__indicator {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: hsla(217 0% 28% /.5);
-}
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+  border-radius: 4px; }
 
-.modal {
+.control--radio .control__indicator {
+  border-radius: 50%; }
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc; }
+
+.control input:checked ~ .control__indicator {
+  background: #fb771a; }
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #fb8633; }
+
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.9;
+  pointer-events: none; }
+
+.control__indicator:after {
+  font-family: 'icomoon';
+  content: '\e5ca';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 500px;
-  height: 300px;
-  /*  Overflow so the modal can scroll if the content is too long  */
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 8px;
-  background: lightgrey
-    url("https://cdn.glitch.global/d8728892-fd46-4386-a360-c5a5794e8210/paper-white.jpg?v=1662134011135")
-    no-repeat top;
-  border-radius: 4px;
-  box-shadow: var(--shadow-elevation-medium-noColor);
-}
+  display: none;
+  font-size: 16px;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
 
-.modal h3 {
-  padding: 8px;
-}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+  color: #fff; }
 
-.modal-spell-form {
-  flex: 1;
-  padding: 8px;
-}
+.control--checkbox .control__indicator:after {
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b; }
+
+.control--checkbox input:disabled:checked ~ .control__indicator {
+  background-color: #7e0cf5;
+  opacity: .2; }
+
+
+  
+
