@@ -20,12 +20,24 @@ a {
 .content {
   padding: 7rem 0; }
 
+header {
+  height: 50px;
+  background-color: #fb8633;
+  width: auto;
+}
+
+body {
+  padding-top: 50px;
+}
+
 h2 {
   font-size: 20px; }
 
 .half, .half .container > .row {
+ 
   height: 100vh;
   min-height: 700px; }
+
 
 @media (max-width: 991.98px) {
   .half .bg {
@@ -70,8 +82,6 @@ h2 {
   color: #888;
   margin: 30px;
 }
-
-
 
 .half .btn {
   height: 54px;
