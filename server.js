@@ -8,10 +8,11 @@ const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
-const todoRoutes = require('./routes/todos')
 const spellsRoutes = require('./routes/spells')
 
+// uncomment vvvv this vvvv line to use local env
 require('dotenv').config({path: 'config/.env'})
+// uncomment ^^^^ this ^^^^ line to use local env
 
 // Passport config
 require('./config/passport')(passport)
@@ -40,12 +41,11 @@ app.use(passport.session())
 app.use(flash())
   
 app.use('/', mainRoutes)
-app.use('/todos', todoRoutes)
 app.use('/spells', spellsRoutes)
  
 
-
+// sup
 
 app.listen(process.env.PORT, ()=>{
-    console.log('Server is running on PORT: ' + process.env.PORT)
+  console.log('Server is running on PORT: ' + process.env.PORT)
 })    
